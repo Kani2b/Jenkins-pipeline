@@ -29,7 +29,7 @@ pipeline {
             steps {
                 emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
                     subject: 'pipeline task',
-                    to: 'kanithanf@gmail.com'
+                    to: 'kanithan@live.com'
             }
         }
     }
