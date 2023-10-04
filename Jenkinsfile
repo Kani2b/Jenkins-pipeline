@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'docker run my-flask python -m pytest tests/'
+        sh 'docker run my-flask python -m pytest app/tests/'
       }
     }
     stage('Deploy') {
@@ -28,7 +28,7 @@ post{
       always{
             sh 'docker rm -f mypycont'
             sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-            mail to: "kanithan@live.com",
+            mail to: "jeelani.yasmin@gmail.com",
             subject: "Notification mail from jenkins",
             body: "CiCd pipeline"
         }
