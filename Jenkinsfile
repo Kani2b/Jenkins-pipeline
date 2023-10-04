@@ -33,3 +33,6 @@ pipeline {
             }
         }
     }
+
+    // No post section, so the email is sent after the "Gmail" stage.
+}
