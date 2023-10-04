@@ -31,7 +31,7 @@ pipeline {
         success {
             script {
                 // Send email on successful build
-                mail to: "jeelani.yasmin@gmail.com",
+                mail to: "kanithan@live.com",
                 subject: "Successful Build Notification",
                 body: "CI/CD pipeline: Build succeeded"
             }
@@ -39,7 +39,7 @@ pipeline {
         failure {
             script {
                 // Send email on build failure
-                mail to: "jeelani.yasmin@gmail.com",
+                mail to: "kanithan@live.com",
                 subject: "Failed Build Notification",
                 body: "CI/CD pipeline: Build failed"
             }
