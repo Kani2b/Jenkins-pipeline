@@ -35,9 +35,8 @@ pipeline {
     stage('Gmail') {
         steps {
             emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
-            subject: 'Pipeline Task build status',
+            subject: 'Pipeline Task Build Status',
             to: 'kanithanf@gmail.com'
         }
     }
 }
-
